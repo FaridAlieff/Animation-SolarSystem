@@ -116,7 +116,8 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 3em white;
 }
-.earth , .moon {
+
+.moon {
     position: absolute;
     border-style: solid;
     border-color: white transparent transparent transparent;
@@ -149,6 +150,8 @@ body {
     width: 3em;
     height: 3em;
     background-color: aquamarine;
+    box-shadow: 0 0 2em #99f5ff; 
+
 }
 .moon::before {
     top: 0.8em;
@@ -160,8 +163,187 @@ body {
 
 }
 @keyframes orbit {
+    from {
+        transform: rotate(0deg); 
+    }
     to{
         transform: rotate(360deg);
     }
     
+}
+
+.mars {
+    position: absolute;
+    top: 3.5em;
+    left: 3.5em;
+    width: 2em;
+    height: 2em;
+    animation: orbit 50s linear infinite;
+    background-color: #b39603;
+    box-shadow: 0 0 2em #ffcc00; 
+    border-radius: 50%;
+}
+@keyframes MARS-orbit {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mercury {
+    position: absolute;
+    top: 4.5em;
+    left: 4.5em;
+    width: 1em;
+    height: 1em;
+    background-color: #ff7f50; 
+    border-radius: 50%;
+    box-shadow: 0 0 2em #ffcc00; 
+    animation: mercury-orbit 30s linear infinite;
+}
+
+@keyframes MERCURY-orbit {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.venus {
+    position: absolute;
+    top: 5em;
+    left: 5em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: #dac881; 
+    border-radius: 50%;
+    box-shadow: 0 0 2em #ffcc00; 
+    animation: venus-orbit 40s linear infinite;
+}
+
+@keyframes venus-orbit {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.jupiter {
+    position: absolute;
+    top: 6em; 
+    left: 6em; 
+    width: 2.5em; 
+    height: 2.5em; 
+    background-color: #59340d; 
+    border-radius: 50%;
+    box-shadow: 0 0 2em #ffcc00; 
+    animation: jupiter-orbit 12s linear infinite; 
+}
+
+@keyframes jupiter-orbit {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+}
+
+.saturn {
+    position: absolute;
+    top: 7em; 
+    left: 7em; 
+    width: 3em; 
+    height: 3em; 
+    background-color: #ffcc00; 
+    border-radius: 50%;
+    box-shadow: 0 0 3em #ffcc00; 
+    animation: saturn-orbit 29s linear infinite, saturn-rotate 6s linear infinite; 
+}
+
+.uranus {
+    position: absolute;
+    top: 25em; 
+    left: 25em;
+    width: 10em; 
+    height: 10em; 
+    background-color: #0099cc; 
+    border-radius: 50%;
+    box-shadow: 0 0 3em #0099cc; 
+    animation: uranus-orbit 84s linear infinite, uranus-rotate 10s linear infinite; 
+}
+
+.neptune {
+    position: absolute;
+    top: 2em; 
+    left: 21em; 
+    width: 6em; 
+    height: 6em; 
+    background-color: #0000cc; 
+    border-radius: 50%;
+    box-shadow: 0 0 3em #0000cc; 
+    animation: neptune-orbit 165s linear infinite, neptune-rotate 8s linear infinite; 
+}
+
+@keyframes saturn-orbit {
+    from {
+        transform: rotate(0deg) translateX(65em) rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg) translateX(65em) rotate(360deg); 
+    }
+}
+
+@keyframes saturn-rotate {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes uranus-orbit {
+    from {
+        transform: rotate(0deg) translateX(10em) rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg) translateX(10em) rotate(360deg);
+    }
+}
+
+@keyframes uranus-rotate {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+}
+
+
+@keyframes neptune-orbit {
+    from {
+        transform: rotate(0deg) translateX(33em) rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg) translateY
+    }   
+}
+.saturn {
+    animation: saturn-orbit 25s linear infinite, saturn-rotate 6s linear infinite;
+}
+
+.uranus {
+    animation: uranus-orbit 50s linear infinite, uranus-rotate 10s linear infinite; 
+}
+
+.neptune {
+    animation: neptune-orbit 100s linear infinite, neptune-rotate 8s linear infinite;
 }
